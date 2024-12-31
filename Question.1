@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main()
+{
+     int num,last_digit,first_digit;
+     
+     printf("Enter three digit integer number : ");
+     scanf("%d",&num);
+     
+     //first we find the last digit of given number 
+     
+    last_digit=num; // the number is stored in the laast number variable 
+    
+    while (last_digit>=10)
+    {
+        last_digit=last_digit/10;  // the given number will be divided by 10 until it comes to 10
+    }
+     
+    // find out first didgit 
+    
+     first_digit=num%10;
+     
+    //sum the first and last digit of the number 
+    
+    printf("The sum of the first and last digit is %d",first_digit+last_digit);
+    return 0;
+}
