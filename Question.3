@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main()
+{
+        for (int i=1;i<=5;i++)
+        {
+            for (int j=0;j<i;j++)
+            {
+              printf(" "); // we want space in this type of pattern 
+            }
+            
+            for (int k=11-i;k>=6;k--)// the number is decresing order
+            {
+                printf("%d",k);
+            }
+            printf("\n");
+        }
+
+    return 0;
+}
