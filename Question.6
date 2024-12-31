@@ -1,0 +1,61 @@
+
+#include <stdio.h>
+#include<string.h>
+
+struct mobile 
+{
+    char company_name[50];  // the compant name will be in this char datatype
+    char colour[50];  //colour also includein the char datatype
+    char model[50]; //model also include in the char datatypes
+    int price ;    // prices includes in the integer datatyope 
+    
+};
+int main()
+{
+    int n,a;
+    printf("Enter the value of N : ");
+    scanf("%d",&n);
+    a=n;
+    struct mobile info[n];
+    
+    //first we have put the valkue of copmpany namer using string 
+    
+    strcpy(info[0].company_name,"Oneplus");   //this is the method of putting string anything
+    strcpy(info[1].company_name,"Redmi");
+    strcpy(info[2].company_name,"Samsung");
+    strcpy(info[3].company_name,"Vivo");
+    
+    //next we putting the colour names with the same method
+    
+    strcpy(info[0].colour,"white");
+    strcpy(info[1].colour,"Red");
+    strcpy(info[2].colour,"Black");
+    strcpy(info[3].colour,"Silver");
+    
+    //next we putting the modelas with the same method
+    
+    strcpy(info[0].model,"Nord 2");
+    strcpy(info[1].model,"Note 8");
+    strcpy(info[2].model,"S23 pro");
+    strcpy(info[3].model,"Y92");
+    
+    // we put the prices
+    
+    info[0].price=15000;
+    info[1].price=25000;
+    info[2].price=40000;
+    info[3].price=90000;
+    
+    //just print the given data 
+    
+    for (int i=0;i<4;i++)
+    {
+      if (i==n-1)    // if the given n is mathched the i then it will printf that index
+      {
+        printf("MOBILE DETAIL\n----------\nCompany %s\nColour %s\nModel no %s\nPrice:- %d",info[i].company_name,info[i].colour,info[i].model,info[i].price);  
+      }
+    }
+    
+
+    return 0;
+}
