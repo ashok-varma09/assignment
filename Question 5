@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+
+int main()
+{
+   int a[5],sum=0;  // sum=0 for some the array elements 
+   int *ptr;   // we declare the vraiable of the ptr
+   
+   ptr=a;    // we stored the value of a in the pointer 
+    
+   for (int i=0;i<5;i++)
+   {
+       printf("a[%d]= ",i);
+       scanf("%d",ptr+i);    //ptr + i because pointer return the address so we have to plus the i to take accurate answer
+   }
+   
+   for (int i=0;i<=5;i++)
+   {
+       sum+=*(ptr+i);
+   }
+   
+   printf("The sum of the array elements is %d",sum);
+    return 0;
+}
