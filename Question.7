@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{
+      FILE *ptr = fopen("1","w");
+      FILE *ptr2 = fopen("2","w");
+      
+      fputs("Welcome to Gamiinii!!\nDon't forget to subscribe",ptr);    // fputs put the data in the defined pointer
+    fclose(ptr);  // after putting the data just close the file for read 
+    
+    ptr= fopen("1","r");
+    char temp[50];
+    
+    if (ptr==NULL)
+    {
+        printf("File is not found!!");
+        return 0;
+        
+    }
+    else 
+    {
+        while(fgets(temp,5,ptr))
+        {
+          fputs(temp,ptr2);    
+        }
+    }
+      
+
+    return 0;
+}
